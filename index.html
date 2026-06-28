@@ -109,6 +109,26 @@ section { position: relative; }
   text-decoration-style: dotted;
   text-underline-offset: 3px;
 }
+.terminal-cv-link {
+  display: inline-flex;
+  align-items: center;
+  min-height: 34px;
+  margin-top: 0.35rem;
+  padding: 0 14px;
+  border: 1px solid rgba(255,240,0,0.45);
+  border-radius: 999px;
+  background: rgba(255,240,0,0.12);
+  color: #FFF000;
+  font-weight: 800;
+  text-decoration: none;
+  box-shadow: 0 0 24px rgba(255,240,0,0.12);
+  transition: transform 0.2s ease, background 0.2s ease, box-shadow 0.2s ease;
+}
+.terminal-cv-link:hover {
+  transform: translateY(-1px);
+  background: rgba(255,240,0,0.2);
+  box-shadow: 0 0 32px rgba(255,240,0,0.2);
+}
 .terminal-cursor {
   display: inline-block;
   width: 0.6em;
@@ -602,6 +622,8 @@ section { position: relative; }
       <div class="terminal-line visible">&nbsp;</div>
       <div class="terminal-line visible"><span class="cmd">$ </span><span class="cmd-text">cat about.md</span></div>
       <div class="terminal-line visible"><span class="cmd">&gt; </span><span class="output">努力变成AI时代下新的职业画像 | ENTP</span></div>
+      <div class="terminal-line visible"><span class="cmd">&gt; </span><span class="link">💕 关于[她]</span></div>
+      <div class="terminal-line visible"><span class="cmd">&gt; </span><a class="terminal-cv-link" href="https://carolcarol7.github.io/resume/cv.html" target="_blank" rel="noopener">点击查看完整版简历</a></div>
     </div>
   </div>
   <div class="hero-scroll">
@@ -880,6 +902,7 @@ section { position: relative; }
     { type: 'output', html: '<span class="output">钻研一切新鲜有趣的事物</span>' },
     { type: 'output', html: '<span class="output">分子生物学→互联网营销→?</span>' },
     { type: 'output', html: '<span class="link">💕 关于[她]</span>' },
+    { type: 'output', html: '<a class="terminal-cv-link" href="https://carolcarol7.github.io/resume/cv.html" target="_blank" rel="noopener">点击查看完整版简历</a>' },
     { type: 'blank' },
     { type: 'cmd',    text: '$ echo "Magic is the ceiling, logic is the floor"' },
     { type: 'output', html: '<span class="highlight">✨</span>' },
